@@ -1,0 +1,2 @@
+# nginx_file
+server {         listen 80;         listen [::]:80;          root /var/www/flaga/templates/html;         index index.html index.htm;          server_name NAZWA_STRONY www.NAZWA_STRONY;          location / {                 include proxy_params;                 proxy_pass http://unix:/var/www/flaga/flaga.sock;         } }
